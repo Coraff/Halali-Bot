@@ -1,5 +1,13 @@
 # Halali Bot
 
+### Navigate:
++ [Halalis](https://github.com/Coraff/Halali-Bot/blob/main/README.md#halalis)
++ [Developer](https://github.com/Coraff/Halali-Bot/blob/main/README.md#developer)
++ [Bot](https://github.com/Coraff/Halali-Bot/blob/main/README.md#bot)
++ [Setup](https://github.com/Coraff/Halali-Bot/blob/main/README.md#setup)
+
+## ────────────────
+
 ### Halalis:
 > + [Halali Discord Server](https://discord.gg/JaFfdHwenU)
 > + [Halali Twitter | @DHalalis](https://twitter.com/DHalalis)
