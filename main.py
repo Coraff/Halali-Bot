@@ -13,7 +13,7 @@ intents.members = True
 
 config = configparser.ConfigParser()
 config.read('config.ini')
-prefix = config['MAIn']['Prefix']
+prefix = config['MAIN']['Prefix']
 
 bot = commands.Bot(prefix, intents=intents)
 # endregion
