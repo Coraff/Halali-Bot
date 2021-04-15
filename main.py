@@ -3,8 +3,6 @@ import configparser
 import os
 from discord.ext import commands
 import discord
-import time
-time.sleep(5)
 # region Imports
 # endregion
 # region Variables
@@ -34,6 +32,13 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"[ - ] | Failed to load extension:      | {extension}")
 # endregion
+
+
+@commands.Cog.listener()
+async def on_guild_join(self, guild: discord.Guild):
+    logs = bot.get_channel(832393838400241705)
+
+    await logs.send(f"Joined `{guild.name}`")
 
 
 @bot.event
