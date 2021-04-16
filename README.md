@@ -24,4 +24,4 @@
 ### Setup:
 > + Make a file called: `.env` and put the following code in it: `TOKEN="YOUR TOKEN"`
 > + Run the `main.py` file.
-> + Configure `config.json` to your liking.
+> + Configure `config.ini` to your liking.
