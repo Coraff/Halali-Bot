@@ -1,2 +1,4 @@
 .env
 /.vscode
+/cogs/__pycache__
+*.pyc
