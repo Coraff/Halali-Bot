@@ -9,41 +9,12 @@ import io
 import textwrap
 import traceback
 from contextlib import redirect_stdout
-import googletrans
 
 
 class Owner(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self._last_result = None
-        self.trans = googletrans.Translator()
-
-    def cleanup_code(self, content):
-        """Automatically removes code blocks from the code."""
-        # remove ```py\n```
-        if content.startswith('```') and content.endswith('```'):
-            return '\n'.join(content.split('\n')[1:-1])
-
-        # remove `foo`
-        return content.strip('` \n')
-
-    @commands.command(hidden=True)
-    async def translate(self, ctx, *, message: commands.clean_content):
-        """Translates a message to English using Google translate."""
-
-        loop = self.bot.loop
-
-        try:
-            ret = await loop.run_in_executor(None, self.trans.translate, message)
-        except Exception as e:
-            return await ctx.send(f'An error occurred: {e.__class__.__name__}: {e}')
-
-        embed = discord.Embed(title='Translated', colour=0x4284F3)
-        src = googletrans.LANGUAGES.get(ret.src, '(auto-detected)').title()
-        dest = googletrans.LANGUAGES.get(ret.dest, 'Unknown').title()
-        embed.add_field(name=f'From {src}', value=ret.origin, inline=False)
-        embed.add_field(name=f'To {dest}', value=ret.text, inline=False)
-        await ctx.send(embed=embed)
 
     @commands.command(name="Restart", aliases=["Reboot"], description="Restarts the bot.")
     async def restart(self, ctx: commands.Context):
