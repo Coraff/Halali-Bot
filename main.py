@@ -27,7 +27,8 @@ bot.restart_channel = vars[str("restart_channel")]
 
 # region Load cogs
 initial_extensions = [
-    'cogs.owner'
+    'cogs.owner',
+    'cogs.fun'
 ]
 
 if __name__ == '__main__':
@@ -66,6 +67,5 @@ async def on_ready():
         vars["restart_channel"] = 0
         with open("vars.json", "w") as f:
             json.dump(vars, f)
-
 
 bot.run(token)
